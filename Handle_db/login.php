@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = $_POST["MAIL"];
     $pass = $_POST["PASS"];
 
+
     require_once($_SERVER["DOCUMENT_ROOT"] . "/config/database.php"); //conexión a la base de datos
     //se hace la consulta a la base de datos con los datos recibidos
     $declaration = $mysqli->query("SELECT * FROM registro WHERE MAIL = '$mail'");
