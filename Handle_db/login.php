@@ -1,10 +1,12 @@
 
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     //se trae el correo y contraseña de login
     $mail = $_POST["MAIL"];
     $pass = $_POST["PASS"];
 
+var_dump($mail);
 
     require_once($_SERVER["DOCUMENT_ROOT"] . "/config/database.php"); //conexión a la base de datos
     //se hace la consulta a la base de datos con los datos recibidos
