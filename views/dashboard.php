@@ -1,9 +1,9 @@
 <?php
-session_start();
+ session_start();
 if (!isset($_SESSION["user_data"])) {
     header("location: /Handle_db/Dashboard.php");
     exit();
-}
+} 
 ?>
 <!DOCTYPE html>
 <html lang="en">

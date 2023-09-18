@@ -11,8 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $result = $mysqli->query("INSERT INTO registro(MAIL,PASS) VALUES ('$email','$hash')"); 
      
     if($result) {
-            header("location: /views/dashboard.php");
-    }
+                    header("location: /views/dashboard.php");
+}
+
+            
         
     else {
         echo "Error al registra el nuevo usuario";
