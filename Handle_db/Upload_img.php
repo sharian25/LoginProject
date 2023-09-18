@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // El archivo está vacío, realiza la gestión de errores o redirecciona a una página de error.
         $_SESSION["vacio"]= "<p style ='color: red;'>No hay un Archivo</p>";
         header("location: /views/edit.php");
-        echo "Error: No se ha seleccionado ningún archivo o el archivo está vacío.";
+        
         // O redirige a una página de error
         // header("location: /error.php");
     }

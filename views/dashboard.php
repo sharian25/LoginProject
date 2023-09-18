@@ -23,7 +23,7 @@ if (!isset($_SESSION["user_data"])) {
         <P class="p1">Basic info, like your name and photo</P>
     </header>
     <ul class="list-group list-group-flush card">
-        <li class="list-group-item" >
+        <li class="list" >
             <div class="li2" >
                 <div class="profile">
                     <h4>Profile</h4> <br>
@@ -40,10 +40,11 @@ if (!isset($_SESSION["user_data"])) {
                             $jpg = $mysqli->query("SELECT * FROM registro WHERE ID = $id");
                             if ($row = $jpg->fetch_assoc()) {
                                 $dataImg = base64_encode($row["PHOTO"]); //DECODIFICA LA FOTO
-                                echo "<img src='data:image/jpg;base64,$dataImg' height='150' style='border-radius: 20px; margin-left: 100px;'>                                ";
+                                echo "<img src='data:image/jpg;base64,$dataImg' height='150' style='border-radius: 20px;'>                                ";
                             }
                             ?>
         </li>
+     
         <li class="list-group-item li">
             <h3>Name: </h3> <span><?php echo $_SESSION["user_data"]["NOMBRE"]; ?></span>
         </li>
@@ -59,6 +60,7 @@ if (!isset($_SESSION["user_data"])) {
         <li class="list-group-item li">
             <h3>Password:</h3> <span><?php echo substr($_SESSION["user_data"]["PASS"], 0, 0) . '**********'; ?></span>
         </li>
+       
     </ul>
     <div class="card-body">
         <a href="../Handle_db/Logout.php" class="card-link">Logout</a>
