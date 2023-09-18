@@ -1,10 +1,28 @@
 
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.modo-nocturno {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+
 .selector-for-some-widget {
   box-sizing: content-box;
 }
 
 .btn {
   width: 100%;
+  margin: 30px 0;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.035em;
+  text-align: center;
 }
 .card {
   width: 100%;
@@ -13,14 +31,23 @@
   padding: 2rem 0;
 }
 .card-body {
+  align-items: center;
   margin: 0 30%;
-  width: 473.831px;
-  height: 634.303px;
+  width: 475px;
+  height: 635px;
   border-radius: 24px;
   border: 1px solid #bdbdbd;
 }
+.card-in {
+
+  margin: 30px auto;
+  width: 400px;
+  height: 500px;;
+
+}
 .icon {
-  margin: 0 10px;
+  
+  margin: 10px;
 /* width: 42px;
 height: 42px;
 color: #828282;
@@ -33,7 +60,52 @@ flex-shrink: 0; */
   justify-content:space-between;
   align-items: center;
   margin: 0 30%;
+  color: #828282;
+font-family: Noto Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.49px;
+}
+.card-title {
+  margin: 30px 0px ;
+  margin-right: 50px;
+  color: #333;
+font-family: Noto Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.63px;
 
+}
+.card-text{
+  margin: 20px 0;
+  margin-right: 50px;
+  color: #333;
+font-family: Noto Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.56px;
+}
+.icon2 {
+  margin-left: 70px;
+  
+
+}
+.p{
+  
+  text-align: center;
+  color: #828282;
+font-family: Noto Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.49px;
 }
 
 /* html {

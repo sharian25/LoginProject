@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="./styles/Index.css">
     <link rel="shortcut icon" href="./assets/devchallenges.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="./Handle_db/Modo nocturno.js"></script>
 </head>
 
 <body>
+<input type="checkbox" id="modoNocturnoToggle">
+<label for="modoNocturnoToggle">Modo Nocturno</label>
+
     <div class="card">
-        <div class="card-body">
+        <div class="card-body"> 
+            <div class="card-in">
         <img src="./assets/devchallenges.svg" alt="##">
             <h5 class="card-title">Join thousands of learners from around the world</h5>
             <p class="card-text">Master web development by making real-life projects. There are multiple paths for you to choose</p>
-            <form action="./Handle_db/create.php" method="post">
+            <form action="./Handle_db/Create.php" method="post">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
@@ -40,14 +45,15 @@
             } 
 
             ?>
-            <p>or continue with these social profile</p>
+            <p class="p">or continue with these social profile</p>
             <div class="icon2">
                 <img class="icon" src="./assets/Google.svg">
                 <img class="icon" src="./assets/Facebook.svg">
                 <img class="icon" src="./assets/Twitter.svg">
                 <img class="icon" src="./assets/Gihub.svg">
             </div>
-            <p>Adready a member? Login<a href="./views/login.php" class="card-link"> Login</a></p>
+            <p class="p">Adready a member? Login<a href="./views/login.php" class="card-link"> Login</a></p>
+        </div>
         </div>
         <div class="lastline">
             <p>Create by <a href="">Pedro Salinas</a></p>
