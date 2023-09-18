@@ -4,6 +4,7 @@ if (!isset($_SESSION["user_data"])) {
     header("location: /Handle_db/Dashboard.php");
     exit();
 } 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +42,8 @@ if (!isset($_SESSION["user_data"])) {
                             if ($row = $jpg->fetch_assoc()) {
                                 $dataImg = base64_encode($row["PHOTO"]); //DECODIFICA LA FOTO
                                 echo "<img src='data:image/jpg;base64,$dataImg' height='150' style='border-radius: 20px;'>                                ";
+                            } else {
+                                echo "<img src='/assets/3Bruce.jpg' height='150' style='border-radius: 20px;'>";
                             }
                             ?>
         </li>

@@ -73,7 +73,7 @@ session_start();
             </div>
             <label>Password</label>
             <div class="form-floating">
-                <input name="PASS" type="password" class="form-control" value="<?= substr($_SESSION["user_data"]["PASS"], 0, 0) . '**********'; ?>">
+                <input name="PASS" type="password" class="form-control">
                 <label for="floatingPassword">Password...</label>
             </div>
             <input class="btn btn-primary" type="submit" value="save">

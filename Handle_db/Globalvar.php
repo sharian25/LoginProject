@@ -1,11 +1,16 @@
 <?php
 session_start();
+var_dump($_SESSION);
+$email = $_SESSION["user_data"]["MAIL"];
+var_dump($email);
+
+
 require_once($_SERVER["DOCUMENT_ROOT"]. "/config/database.php");
 
-$sql = "SELECT * FROM registro"; //se hace una nueva consulta en la tabla
-$resultado = $mysqli->query($sql); //se traen los valores ya actualizados
+ //se hace una nueva consulta en la tabla
+$resultado = $mysqli->query("SELECT * FROM registro WHERE MAIL ='$email'"); //se traen los valores ya actualizados
 
-        if ($resultado) {
+        if ($resultado->num_rows == 1) {
         // Obténemos los nuevos datos 
         $fila = $resultado->fetch_assoc(); //se crea un arreglo asociativo
 
