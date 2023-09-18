@@ -53,27 +53,27 @@ session_start();
         <form action="../Handle_db/Edit.php" method="post" class="form">
             <label>Name</label>
             <div class="form-floating mb-3">
-                <input name="NOMBRE" type="text" class="form-control" id="floatingInput" placeholder="Enter your name">
+                <input name="NOMBRE" type="text" class="form-control" value="<?= $_SESSION["user_data"]["NOMBRE"] ?>">
                 <label for="floatingInput">Enter your name...</label>
             </div>
             <label>Bio</label>
             <div class="form-floating">
-                <input name="BIO" type="textarea" class="bio" id="floatingPassword" placeholder="Bio">
+                <input name="BIO" type="textarea" class="bio" rows="4" cols="30" value="<?= $_SESSION["user_data"]["BIO"] ?>">
                 <label for="floatingPassword">Bio...</label>
             </div>
             <label>Phone</label>
             <div class="form-floating mb-3">
-                <input name="PHONE" type="text" class="form-control" id="floatingInput" placeholder="Enter your phone">
+                <input name="PHONE" type="text" class="form-control" value="<?= $_SESSION["user_data"]["PHONE"] ?>">
                 <label for="floatingInput">Phone...</label>
             </div>
             <label>Email</label>
             <div class="form-floating">
-                <input name="MAIL" type="email" class="form-control" id="floatingPassword" placeholder="Enter your mail">
+                <input name="MAIL" type="email" class="form-control" value="<?= $_SESSION["user_data"]["MAIL"] ?>">
                 <label for="floatingPassword">E-mail...</label>
             </div>
             <label>Password</label>
             <div class="form-floating">
-                <input name="PASS" type="password" class="form-control" id="floatingPassword" placeholder="Update your password">
+                <input name="PASS" type="password" class="form-control" value="<?= substr($_SESSION["user_data"]["PASS"], 0, 0) . '**********'; ?>">
                 <label for="floatingPassword">Password...</label>
             </div>
             <input class="btn btn-primary" type="submit" value="save">

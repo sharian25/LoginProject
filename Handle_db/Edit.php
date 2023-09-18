@@ -11,7 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // se captura en variables lo intro
     $phone= $_POST["PHONE"];
     $hash = password_hash($pass, PASSWORD_DEFAULT); // contraseña codificada
 
-    require_once($_SERVER["DOCUMENT_ROOT"]. "/config/database.php"); //conexión a la base de datos
+    if (empty($nombre) || empty($pass) || empty($email) || empty($bio) || empty($phone)) {
+        $_SESSION["vacio"] = "<P style ='color: red;'> Uno o más campos están vacíos <br> Por favor, completa todos los campos. </p>";
+        header("location: /views/edit.php");
+
+    }
+    else {
+        require_once($_SERVER["DOCUMENT_ROOT"]. "/config/database.php"); //conexión a la base de datos
 
     $result = $mysqli->query("UPDATE registro SET   
         MAIL = '$email', 
@@ -19,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // se captura en variables lo intro
         NOMBRE = '$nombre',
         BIO = '$bio',
         PHONE = '$phone'
-        WHERE ID = $id"); //nuevos datos actualizando la fila y sus valores
+        WHERE ID = $id"); //nuevos datos actualizando la fila y sus valores 
 
             if($result) {
                 $sql = "SELECT * FROM registro WHERE ID = $id"; //se hace una nueva consulta en un ID
@@ -36,19 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // se captura en variables lo intro
         echo "Error al actualizar  La información personal";
     }
 } 
+    }
+
+
+    
 }
 ?>
-    /* try {
-    } catch (mysqli_sql_exception $e) {
-        if ($mysqli->errno === 1062) {
-            session_start();
-            $_SESSION["duplicado"]= "<p style ='color: red;'>El correo esta Registrado</p>"; 
-            header("location: /Index.php");
-        } else {
-            echo "Error:" . $e->getMessage();
-        }
-         
-    } */
+    
   
  
 
