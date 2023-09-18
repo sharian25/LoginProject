@@ -12,6 +12,11 @@
      <header>
         <h1> No has iniciado sesión</h1>
         <a href="/views/login.php">Login</a>
+
+        <!-- <?php
+        session_start();
+        echo $_SESSION["user-data"]["NOMBRE"];
+        ?> -->
     </header>
     
 </body>
